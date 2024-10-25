@@ -38,7 +38,7 @@ export async function POST(req: Request) {
             { message: 'Successfully created the user. Now waiting for verification' },
             { status: 200 }
         )
-    } catch (error) {
+    } catch {
         return NextResponse.json(
             { error: 'An unexpected error occurred on our end, please try again later' },
             { status: 500 }

@@ -26,7 +26,7 @@ const registerSchema = baseSchema.extend({
 const loginSchema = baseSchema.extend({})
 
 // hook to create a form
-function useCustomForm<T extends ZodSchema<any>>(
+function useCustomForm<T extends ZodSchema>( 
     schema: T,
     defaultValues: z.infer<T>
 ): UseFormReturn<z.infer<T>> {

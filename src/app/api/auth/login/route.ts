@@ -33,7 +33,7 @@ export async function POST(req: Request) {
             { message: 'Successfully logged in the user' },
             { status: 200 }
         )
-    } catch (error) {
+    } catch {
         return NextResponse.json(
             { error: 'An unexpected error occurred on our end, please try again later' },
             { status: 500 }
