@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Study Hub
+
+Welcome to **Study Hub**, a collaborative platform designed to help students and professionals organize, access, and share study resources efficiently. Built with Next.js, Study Hub offers a seamless experience for managing notes, materials, and interactive tools, all in one place.
+
+---
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies](#technologies)
+4. [Getting Started](#getting-started)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+
+---
+
+## Overview
+
+**Study Hub** is a modern application built with Next.js, offering users a dedicated space to store study resources, create and share notes, and access educational tools that support efficient learning. Whether you're a student or a lifelong learner, Study Hub brings all your study needs into a single, accessible platform.
+
+## Features
+
+- **Organize Notes & Resources**: Create, organize, and manage study notes in categorized folders.
+- **Interactive Tools**: Use interactive study aids such as flashcards, quizzes, and more.
+- **Collaboration**: Share notes and resources with friends or study groups.
+- **User Profiles**: Personalize profiles to showcase interests, achievements, and frequently used resources.
+- **Search & Filter**: Quickly find notes or topics using robust search and filter options.
+
+## Technologies
+
+- **Next.js**: For server-side rendering, fast performance, and seamless routing.
+- **React**: Component-based structure for a dynamic and responsive UI.
+- **Npm**: Package management and dependency resolution.
+- **JavaScript/TypeScript**: Core logic and type safety.
+- **Supabase**: Cloud based database with its own related APIs.
+- **Prisma**: As an ORM, it helps unifying data access from multiple enterprise systems into a single API.
+- **Tailwind**: Unified CSS styling library.
+- **ShadcnUI**: Highly customizable react components library.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy of **Study Hub** up and running, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14 or later)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zoryon/study-hub.git
