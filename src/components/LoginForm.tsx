@@ -16,11 +16,12 @@ import axios from "axios"
 import { useState } from "react"
 
 const LoginForm = () => {
-    const { form, schema } = useLoginForm()
+    const { form } = useLoginForm()
+    type schema = z.infer<ReturnType<typeof useLoginForm>['schema']>
 
     const [loading, setLoading] = useState<boolean>(false)
 
-    async function onSubmit(values: z.infer<typeof schema>) {
+    async function onSubmit(values: schema) {
         setLoading(true)
 
         try {

@@ -16,11 +16,12 @@ import axios from "axios"
 import { useState } from "react"
 
 const RegisterForm = () => {
-    const { form, schema } = useRegisterForm()
+    const { form } = useRegisterForm()
+    type schema = z.infer<ReturnType<typeof useRegisterForm>['schema']>
 
     const [loading, setLoading] = useState<boolean>(false)
 
-    async function onSubmit(values: z.infer<typeof schema>) {
+    async function onSubmit(values: schema) {
         setLoading(true)
 
         try {
