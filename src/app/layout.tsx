@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "StudyHub",
+  title: "StdyHub",
   description: "A collaborative platform to organize and access study resources effectively.",
 };
 

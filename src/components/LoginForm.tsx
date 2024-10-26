@@ -14,8 +14,10 @@ import { useLoginForm } from "@/lib/auth-forms"
 import { z } from "zod"
 import axios from "axios"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 const LoginForm = () => {
+    const router = useRouter()
     const { form } = useLoginForm()
     type schema = z.infer<ReturnType<typeof useLoginForm>['schema']>
 
@@ -30,6 +32,8 @@ const LoginForm = () => {
             if (!data) {
                 return console.error("An error occurred on our end, please try again later.")
             }
+
+            router.push("/")
         } catch (error) {
             console.error("Login failed", error)
         } finally {
