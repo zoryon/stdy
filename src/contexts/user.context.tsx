@@ -6,12 +6,20 @@ import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios"
 
 interface UserContextProps {
-    user: PrismaUser | null;
+    user: PrismaUser;
     refreshUser: () => Promise<void>;
 }
 
+const defaultUser: PrismaUser = {
+    id: "-1",
+    created_at: new Date(),
+    username: "",
+    email: "",
+    avatar_url: "",
+}
+
 const UserContext = createContext<UserContextProps>({
-    user: null,
+    user: defaultUser,
     refreshUser: async () => {
         console.warn('UserContext not initialized');
     }
@@ -23,14 +31,14 @@ export const UserContextProvider = ({
 }: {
     children: React.ReactNode;
     initialData?: {
-        user?: PrismaUser | null;
+        user?: PrismaUser;
     };
 }) => {
     const supabase = createClient();
-    const [user, setUser] = useState<PrismaUser | null>(initialData.user || null);
+    const [user, setUser] = useState<PrismaUser>(initialData.user || defaultUser);
 
     const fetchPrismaUser = async (supabaseUserId: string | null) => {
-        if (!supabaseUserId) return null;
+        if (!supabaseUserId) return defaultUser;
     
         try {
             const { data } = await axios.get(`/api/actions/getUser`, {
@@ -39,7 +47,7 @@ export const UserContextProvider = ({
             return data;
         } catch (error) {
             console.error('Error fetching Prisma user:', error);
-            return null;
+            return defaultUser;
         }
     };
 

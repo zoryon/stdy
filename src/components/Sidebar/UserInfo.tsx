@@ -22,9 +22,9 @@ const UserInfo = () => {
             <DropdownMenuTrigger asChild>
                 <div>
                     <UserProfile
-                        avatarUrl={user?.avatar_url!}
-                        username={user?.username!}
-                        email={user?.email!}
+                        avatarUrl={user?.avatar_url}
+                        username={user?.username}
+                        email={user?.email}
                     />
                 </div>
             </DropdownMenuTrigger>
@@ -34,10 +34,10 @@ const UserInfo = () => {
 };
 
 // display user's avatar, username and email
-const UserProfile = ({ avatarUrl, username, email }: { avatarUrl: string, username: string, email: string }) => (
+const UserProfile = ({ avatarUrl, username, email }: { avatarUrl: string | null, username: string, email: string }) => (
     <div className="w-full h-12 flex items-center gap-3 cursor-pointer hover:bg-secondary px-3 py-7 rounded-sm">
         <Avatar>
-            <AvatarImage src={avatarUrl} alt={username} />
+            <AvatarImage src={avatarUrl || "https://github.com/shadcn.png"} alt={username} />
             <AvatarFallback>
                 <img src="https://github.com/shadcn.png" alt="fallback" />
             </AvatarFallback>
