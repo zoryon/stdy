@@ -33,7 +33,7 @@ const LoginForm = () => {
                 return console.error("An error occurred on our end, please try again later.")
             }
 
-            router.push("/")
+            router.replace("/")
         } catch (error) {
             console.error("Login failed", error)
         } finally {

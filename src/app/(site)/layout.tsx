@@ -1,4 +1,5 @@
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import { UserContextProvider } from "@/contexts/user.context";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,9 +12,11 @@ export default function SiteLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="h-screen w-screen flex">
-      <Sidebar />
-      {children}
-    </div>
+    <UserContextProvider>
+      <div className="h-screen w-screen flex">
+        <Sidebar />
+        {children}
+      </div>
+    </UserContextProvider>
   );
 }
