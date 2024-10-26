@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Stdy",
+  title: "STDY - Studying with ease",
   description: "A collaborative platform to organize and access study resources effectively.",
 };
 
