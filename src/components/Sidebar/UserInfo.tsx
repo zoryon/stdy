@@ -10,7 +10,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from "../ui/dropdown-menu";
-import { CreditCard, LogOut, Settings, User, LucideIcon } from "lucide-react";
+import { CreditCard, LogOut, LucideIcon, CircleFadingArrowUp } from "lucide-react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
@@ -57,9 +57,8 @@ const UserDropdown = () => {
         <DropdownMenuContent className="w-[230px]">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownIconItem icon={User} label="Profile" />
             <DropdownIconItem icon={CreditCard} label="Billing" />
-            <DropdownIconItem icon={Settings} label="Settings" />
+            <DropdownIconItem icon={CircleFadingArrowUp} label="Upgrade" />
             <DropdownMenuSeparator />
             <DropdownIconItem icon={LogOut} label="Logout" fn={async () => {
                 const { data } = await axios.post('/api/auth/logout')

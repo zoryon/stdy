@@ -1,5 +1,5 @@
+import Providers from "@/components/Providers";
 import Sidebar from "@/components/Sidebar/Sidebar";
-import { UserContextProvider } from "@/contexts/user.context";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,11 +12,11 @@ export default function SiteLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <UserContextProvider>
-      <div className="h-screen w-screen flex">
+    <Providers>
+      <div className="h-screen w-screen flex bg-secondary">
         <Sidebar />
         {children}
       </div>
-    </UserContextProvider>
+    </Providers>
   );
 }
